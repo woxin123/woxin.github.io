@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Go语言,map,">
 
 
 
@@ -81,13 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Enthusiasm">
-<meta property="og:url" content="http://yoursite.com/tags/线程池/index.html">
+<meta name="description" content="map散列表（经常被称为哈希表，但是更准确的说是散列表）是一个非常优秀的数据结构。它是一个拥有键值对的无序集合。在这个集合中，可以通过唯一的键找到一个与之对应的值，并且可以通过这个键进行删、改和查。并且这个查询可以在常量的时间内完成。 在高级语言中基本都有map数据结构（有的名字不同，功能相同），Go语言也不例外。在Go语言中，map是散列表的引用，map的类型是map[K]V，其中K和V是字典的">
+<meta name="keywords" content="Go语言,map">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go语言之map">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/Go语言之map/index.html">
 <meta property="og:site_name" content="Enthusiasm">
+<meta property="og:description" content="map散列表（经常被称为哈希表，但是更准确的说是散列表）是一个非常优秀的数据结构。它是一个拥有键值对的无序集合。在这个集合中，可以通过唯一的键找到一个与之对应的值，并且可以通过这个键进行删、改和查。并且这个查询可以在常量的时间内完成。 在高级语言中基本都有map数据结构（有的名字不同，功能相同），Go语言也不例外。在Go语言中，map是散列表的引用，map的类型是map[K]V，其中K和V是字典的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-19T03:35:36.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Enthusiasm">
+<meta name="twitter:title" content="Go语言之map">
+<meta name="twitter:description" content="map散列表（经常被称为哈希表，但是更准确的说是散列表）是一个非常优秀的数据结构。它是一个拥有键值对的无序集合。在这个集合中，可以通过唯一的键找到一个与之对应的值，并且可以通过这个键进行删、改和查。并且这个查询可以在常量的时间内完成。 在高级语言中基本都有map数据结构（有的名字不同，功能相同），Go语言也不例外。在Go语言中，map是散列表的引用，map的类型是map[K]V，其中K和V是字典的">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/线程池/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/19/Go语言之map/">
 
 
 
 
 
-  <title>标签: 线程池 | Enthusiasm</title>
+  <title>Go语言之map | Enthusiasm</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,52 +283,217 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>线程池<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/19/Go语言之map/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="woxin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/火影.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Enthusiasm">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/04/16/线程池详解-md/" itemprop="url">
-              
-                <span itemprop="name">线程池详解.md</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Go语言之map</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-16T22:02:39+08:00" content="2019-04-16">
-          04-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-19T11:33:34+08:00">
+                2019-06-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Go语言/" itemprop="url" rel="index">
+                    <span itemprop="name">Go语言</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Go语言/复合数据类型/" itemprop="url" rel="index">
+                    <span itemprop="name">复合数据类型</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><p>散列表（经常被称为哈希表，但是更准确的说是散列表）是一个非常优秀的数据结构。它是一个拥有键值对的无序集合。在这个集合中，可以通过唯一的键找到一个与之对应的值，并且可以通过这个键进行删、改和查。并且这个查询可以在常量的时间内完成。</p>
+<p>在高级语言中基本都有map数据结构（有的名字不同，功能相同），Go语言也不例外。在Go语言中，<code>map</code>是散列表的引用，<code>map</code>的类型是<code>map[K]V</code>，其中K和V是字典的键和值对应的数据类型。<code>map</code>中的所有键都拥有相同的类型，所有的值也拥有相同的数据类型。其中键的类型必须是可以通过操作符<code>==</code>来比较的数据类型，所以<code>map</code>可以检测某一个值是否已经存在。值类型是没有任何限制的。</p>
+<p>可以通过内置函数<code>make</code>来创建一个<code>map</code>：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ages := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>)  <span class="comment">// 这里创建一个从string到int的map</span></span><br></pre></td></tr></table></figure>
+<p>也可以通过使用<code>map</code>的字面量来创建一个带初始化键值对的<code>map</code>:</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ages := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>&#123;</span><br><span class="line">    <span class="string">"alice"</span>: <span class="number">31</span>,</span><br><span class="line">    <span class="string">"charlie"</span>: <span class="number">34</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，也可以不写初始化，只写一个花括号来创建一个空的<code>map</code>，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map[string]int&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="map的基本操作-增、删、改、查"><a href="#map的基本操作-增、删、改、查" class="headerlink" title="map的基本操作(增、删、改、查)"></a>map的基本操作(增、删、改、查)</h3><p>map的元素访问和数组类似，都是通过下标的方式来访问：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加键值对或更新键值对（如果map中没有对应的key，则新增，有则更新）</span></span><br><span class="line">ages[<span class="string">"alice"</span>] = <span class="number">32</span></span><br><span class="line">fmt.Println(ages[<span class="string">"alice"</span>])  <span class="comment">// "32"</span></span><br></pre></td></tr></table></figure>
+<p>删除可以通过内置的<code>delete</code>函数来从字典中根据键删除一个元素：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">delete</span>(ages, <span class="string">"alice"</span>) <span class="comment">// 删除元素 ages["alice"]</span></span><br></pre></td></tr></table></figure>
+<p>及时<code>map</code>中不存在对应的键，上面的操作也是安全的。<strong><code>map</code>使用给定的键来查找元素，如果对应的元素不存在，那么返回的是值类型对应的零值。</strong> 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ages[&quot;bob&quot;] = ages[&quot;bob&quot;] + 1</span><br></pre></td></tr></table></figure>
+<p>尽管<code>map</code>中没有“bob”对应的键，也不会报错，因为<code>ages[&quot;bob&quot;]</code>的值是0。</p>
+<p>那么这里就有一个问题，如何判断<code>map</code>中的某一个键是否存在？</p>
+<p>这里可以通过<code>map</code>下标访问返回多个值来判断。下标访问可以返回两个值，一个是对应的<code>value</code>，另一个是一个<code>bool</code>类型，用来表示该键是否存在对应的值。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">age, ok := ages[&quot;bob&quot;]</span><br><span class="line">if !ok &#123;</span><br><span class="line">    /*</span><br><span class="line">    &quot;bob&quot;不是map中的键，age == 0</span><br><span class="line">    */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一般而言，第二个<code>bool</code>值被叫做ok。</p>
+<p><code>map</code>也可以使用<code>+=、-=、++、--</code>等赋值方式。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ages[&quot;bob&quot;] += 1</span><br><span class="line">// 或者</span><br><span class="line">ages[&quot;bob&quot;]++</span><br></pre></td></tr></table></figure>
+<p>但是无法获取<code>map</code>元素的地址，比如这样是不对的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_ = &amp;ages[&quot;bob&quot;] // 编译错误，无法获取map元素的地址</span><br></pre></td></tr></table></figure>
+<p><strong>无法获取<code>map</code>元素的地址是因为<code>map</code>的增长可能会导致已有的元素被重新散列到新的存储位置，这样就可以导致获取的地址是其他元素的地址吗，从而导致指针出现不安全。</strong></p>
+<p>map的遍历可以通过<code>for</code>循环来完成，和遍历<code>slice</code>一样。循环语句的连续迭代会使得变量<code>name</code>和<code>age</code>被赋予<code>map</code>中的一下对键和值。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name, age := ranges ages &#123;</span><br><span class="line">    fmt.Printf(<span class="string">"%s\t%d\n"</span>, name, age)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里可以省略值，而只保留键，如下：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name := ranges ages &#123;</span><br><span class="line">    fmt.Printf(<span class="string">"%s\n"</span>, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>map</code>中元素迭代顺序是不固定的，它的顺序是通过散列算法散列得到的，不同的散列算法会到的不同的散列序列。可以认为这种顺序是随机的。</p>
+<p>Go语言没有提供集合的功能，但是可以使用<code>map</code>来模拟集合的功能。</p>
+<blockquote>
+<p>如果对Java有点了解的话，就会知道Java中的集合<code>set</code>也是通过<code>map</code>来实现的。</p>
+</blockquote>
+<p>和slice一样，map也是不可比较的，唯一可以比较的就是<code>nil</code>。</p>
+<p>下面的一个关于使用<code>map</code>模拟集合的一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;bufio&quot;</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	seen := make(map[string]bool)</span><br><span class="line">	input := bufio.NewScanner(os.Stdin)</span><br><span class="line">	for input.Scan() &#123;</span><br><span class="line">		line := input.Text()</span><br><span class="line">		if !seen[line] &#123;</span><br><span class="line">			seen[line] = true</span><br><span class="line">			fmt.Println(line)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	if err := input.Err(); err != nil &#123;</span><br><span class="line">		fmt.Fprintf(os.Stderr, &quot;dedup: %v\n&quot;, err)</span><br><span class="line">		os.Exit(1)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Go语言/" rel="tag"># Go语言</a>
+          
+            <a href="/tags/map/" rel="tag"># map</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/08/CORS跨域详解/" rel="next" title="CORS跨域详解">
+                <i class="fa fa-chevron-left"></i> CORS跨域详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -331,6 +501,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -351,8 +525,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +614,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#map"><span class="nav-number">1.</span> <span class="nav-text">map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map的基本操作-增、删、改、查"><span class="nav-number">1.0.1.</span> <span class="nav-text">map的基本操作(增、删、改、查)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -571,6 +770,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
